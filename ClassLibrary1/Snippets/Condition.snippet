@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>condition</Title>
+      <Shortcut>con</Shortcut>
+      <Author>Katerenchuk Stanislav aka Kstas</Author>
+      <Description> Create condition</Description>
+    </Header>
+    <Snippet>
+      <Code Language="CSharp">
+        <![CDATA[
+            SAPbouiCOM.Conditions oCons = (SAPbouiCOM.Conditions)Application.SBO_Application.CreateObject(SAPbouiCOM.BoCreatableObjectType.cot_Conditions);
+            SAPbouiCOM.Condition oCon;
+            oCon = oCons.Add();    
+            oCon.Alias = $Alias$;
+            oCon.Operation = SAPbouiCOM.BoConditionOperation.co_NOT_NULL;]]>
+      </Code>    
+      <Declarations>
+        <Literal>
+          <ID>Alias</ID>
+          <ToolTip>Choose the number you want the square root of.</ToolTip>
+          <Default>"Code"</Default>
+        </Literal>
+      </Declarations>
+      
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
